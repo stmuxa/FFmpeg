@@ -412,7 +412,7 @@ static int scalecuda_resize(AVFilterContext *ctx,
 
     for (i = 0; i < s->in_planes; i++) {
         CUDA_TEXTURE_DESC tex_desc = {
-            .filterMode = CU_TR_FILTER_MODE_POINT,
+            .filterMode = CU_TR_FILTER_MODE_LINEAR,
             .flags = CU_TRSF_READ_AS_INTEGER,
         };
 
